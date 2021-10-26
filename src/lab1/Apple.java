@@ -8,7 +8,7 @@ public class Apple extends Food {
     @Override
     public void consume() {
         System.out.println(get_name() + " with worms! Damn!");
-
+    }
         @Override
         public int calculateCalories() {
             return get_calories();
@@ -18,5 +18,4 @@ public class Apple extends Food {
         public String toString() {
             return super.toString();
         }
-    }
 }

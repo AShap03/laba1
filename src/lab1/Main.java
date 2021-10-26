@@ -52,25 +52,21 @@ public class Main {
                 breakfast.add(new Apple());
             else if (food.equals("Cheese"))
                 breakfast.add(new Cheese());
-            else if (food.equals("Sandwich")){
-                System.out.print("Enter first filling: ");
+            else if (food.equals("Tea")){
+                System.out.println("Enter first filling of tea: ");
                 String filling1 = scanner.nextLine();
-                if (!(filling1.equals("Ham") || filling1.equals("Chicken")))
-                    throw new ClassNotFoundException("This food so fat for breakfast!");
-                System.out.print("Enter second filling: ");
-                String filling2 = scanner.nextLine();
-                if (!(filling2.equals("Ketchup") || filling2.equals("Mayonnaise")))
-                    throw new ClassNotFoundException("This food so fat for breakfast!");
-                breakfast.add(new Sandwich(filling1,filling2));
+                if (filling1.equals("Green") || filling1.equals("Black")){
+                    breakfast.add(new Tea(filling1));
+                }
+
             }
-            else throw new ClassNotFoundException("This food so fat for breakfast!");
 
             System.out.print("Do u want more? (y/n) ");
             answer = scanner.nextLine();
         } while(answer.equals("y"));
     }
 
-    public static void PrintArrayList(final ArrayList<Food> breakfast) throws ClassNotFoundException, NoSuchFieldException {
+    public static void PrintArrayList(final ArrayList<Food> breakfast) {
         if (breakfast == null)
             System.out.println("U are fat, u are not allowed to eat!");
         System.out.println("U want to ate today: ");
