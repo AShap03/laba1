@@ -48,17 +48,22 @@ public class Main {
             System.out.print("Enter food: ");
             String food = scanner.nextLine();
 
-            if (food.equals("Apple"))
-                breakfast.add(new Apple());
-            else if (food.equals("Cheese"))
+            if (food.equals("Apple")) {
+                System.out.println("Enter first filling of apple: ");
+                String size = scanner.nextLine();
+                if (size.equals("medium") || size.equals("Small") || size.equals("Big")) {
+                    breakfast.add(new Apple(size));
+                }
+            }
+            if (food.equals("Cheese")) {
                 breakfast.add(new Cheese());
-            else if (food.equals("Tea")){
+            }
+            if (food.equals("Tea")){
                 System.out.println("Enter first filling of tea: ");
                 String filling1 = scanner.nextLine();
                 if (filling1.equals("Green") || filling1.equals("Black")){
                     breakfast.add(new Tea(filling1));
                 }
-
             }
 
             System.out.print("Do u want more? (y/n) ");

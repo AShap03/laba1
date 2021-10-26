@@ -3,10 +3,12 @@ package lab1;
 public abstract class Food implements Consumable, Nutritious {
     private String _name = null;
     private int _calories = 0;
+//    private String _size = null;
 
     public Food(String name, int calories) {
         _calories = calories;
         _name = name;
+
     }
 
     public int get_calories() {
@@ -22,6 +24,13 @@ public abstract class Food implements Consumable, Nutritious {
     private void set_name(String name) {
         _name = name;
     }
+
+//    public String get_size() {
+//        return _size;
+//    }
+//    private void set_size(String size) {
+//        _size = size;
+//    }
 
     @Override
     public boolean equals(Object arg0) {

@@ -16,7 +16,7 @@ public class Tea extends Food {
 
     @Override
     public void consume() {
-        System.out.println(get_name() + " eaten! :)");
+        System.out.println(get_name() + " drinked!");
     }
 
     @Override

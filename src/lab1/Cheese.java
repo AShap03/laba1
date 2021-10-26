@@ -4,6 +4,8 @@ public class Cheese extends Food{
     public Cheese() {
         super("Cheese", 400);
     }
+    //public Cheese это конструктор без параметров а вызывая super у нас вызыввается конструктор класса родителя, так мы определяем переменные класса родителя
+
 
     @Override
     public void consume() {
